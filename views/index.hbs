@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link href="index.css" rel="stylesheet">
+</head>
+
+<body id="body">
+  <!--top nav-->
+  <nav class="navbar navbar-custom">
+    <div class="container-fluid navin">
+      <h3>WeatherVisit</h3>
+    </div>
+  </nav>
+  <p id="random">{%random%}</p>
+  <div class="cont">
+    <div class="d-flex" id="locdiv">
+      <form class="flex" action="/home" method="post">
+        <input placeholder="Enter City name..." type="text" name="cityname" id="loc">
+        <button type="submit" id="btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" style="color:rgb(1, 1, 68);">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+    </div>
+  </div>
+  <script>
+    const body=document.getElementById("body");
+    const num=document.getElementById("random");
+    if(num.innerHTML==1||num.innerHTML==6){
+     body.style.backgroundImage="url('https://cdn.pixabay.com/photo/2018/04/29/01/15/coast-3358815_1280.jpg')";
+    }
+    else if(num.innerHTML==3||num.innerHTML==9){
+     body.style.backgroundImage="url('https://cdn.pixabay.com/photo/2017/08/01/01/17/beach-2562563_1280.jpg')";
+    }
+    else if(num.innerHTML==2||num.innerHTML==7){
+      body.style.backgroundImage="url('https://cdn.pixabay.com/photo/2016/11/22/21/31/dark-1850638_1280.jpg')";
+    }
+    else if(num.innerHTML==4||num.innerHTML==5){
+      body.style.backgroundImage="url('https://cdn.pixabay.com/photo/2015/04/23/21/59/hot-air-balloon-736879_1280.jpg')";
+    }else{
+      body.style.backgroundImage="url('https://cdn.pixabay.com/photo/2014/09/10/00/59/mountains-440520_1280.jpg')";
+    }
+  </script>
+</body>
+
+</html>
